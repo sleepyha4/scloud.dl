@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SoundCloud Downloader</title><link rel="stylesheet" href="popup.css"></head><body><header><b>SoundCloud Downloader</b><button id="config-toggle" title="Settings">⚙</button></header>
+<section id="config" hidden><label>Website URL</label><input id="server" type="url" placeholder="https://your-site.onrender.com"><label>Access key</label><input id="key" type="password" placeholder="Access key"><button id="save" class="main">Save settings</button></section>
+<section><div class="row"><input id="url" type="url" placeholder="SoundCloud track or playlist"><button class="main" id="inspect">Load</button></div><p id="message"></p></section>
+<section id="found" hidden><strong id="title"></strong><div id="tracks"></div><div class="row tools"><button id="all">All</button><button id="none">None</button><button class="main" id="start">Download selected</button></div></section>
+<section><strong>Queue</strong><div id="jobs"><small>No queued downloads.</small></div></section>
+<footer><a id="website" href="#" target="_blank">Open website ↗</a></footer><script src="popup.js"></script></body></html>

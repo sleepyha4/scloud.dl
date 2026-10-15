@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "SoundCloud Downloader (Development)",
+  "version": "2.0.0",
+  "description": "Track and playlist download controls for authorized SoundCloud audio.",
+  "action": {"default_title": "SoundCloud Downloader", "default_popup": "popup.html", "default_icon": "icon48.png"},
+  "icons": {"16": "icon16.png", "48": "icon48.png", "128": "icon128.png"},
+  "permissions": ["storage", "downloads", "alarms", "activeTab"],
+  "host_permissions": ["https://*.onrender.com/*", "http://localhost/*", "http://127.0.0.1/*"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [{"matches": ["https://soundcloud.com/*", "https://www.soundcloud.com/*"], "js": ["content.js"], "css": ["content.css"], "run_at": "document_idle"}],
+  "minimum_chrome_version": "120"
+}
