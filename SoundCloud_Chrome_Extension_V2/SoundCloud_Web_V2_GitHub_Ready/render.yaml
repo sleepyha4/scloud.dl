@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: soundcloud-web
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_KEY
+        generateValue: true
